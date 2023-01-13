@@ -65,6 +65,10 @@
         fieldset{
             border: 0px solid #D7C3B3;
         }
+
+        .index{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -81,6 +85,10 @@
             <div>
                 <br>
                 <h6 style="color: whitesmoke; text-align: center;">Não possuí conta?<p></p><a href="cadastrohome.php" style="color: #D7C3B3; align-items: center; font-size: x-small;">Cadastrar-se</a></h6>
+            </div>
+
+            <div class="index">
+                <a href="index.php"><img src="https://img.icons8.com/material-outlined/24/null/home--v2.png"/></a>
             </div>
         </fieldset>
     </div>
