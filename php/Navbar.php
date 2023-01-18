@@ -6,7 +6,7 @@
                <div class="row">
                   <div class="col-sm-12">
                      <div class="logo"> <img src="../images/logo.png"> </div>
-                     <div class="banner_taital"><a class="nomeloja" href="index.html">NATKOS</a></div>
+                     <div class="banner_taital"><a class="nomeloja" href="index2.php">NATKOS</a></div>
                   </div>
                </div>
             </div>
@@ -16,7 +16,7 @@
                <div class="containt_main">
                   <div id="mySidenav" class="sidenav">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                     <a href="index.php">Home</a>
+                     <a href="index2.php">Home</a>
                      <a href="Produto.php">Produtos</a>
                      <a href="addProduto.php">Formulario</a>
                   </div>
@@ -52,7 +52,7 @@
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                               <span class="padding_10">Carrinho</span></a>
                            </li>
-                           <li><a href="../PHP/home.php">
+                           <li><a href="home.php">
                               <i class="fa fa-user" aria-hidden="true"></i>
                               <span class="padding_10">Usuario</span></a>
                            </li>

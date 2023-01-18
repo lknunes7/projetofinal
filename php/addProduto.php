@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>CRUD Pessoas</title>
+<title>Adicionar Pessoas</title>
 </head>
 <body>
 <fieldset>
@@ -22,7 +22,7 @@ placeholder="Informe o preço"><br><br>
 
 <br><br>
 <input type="submit" value="Salvar" h>
-<a href="index.php"><input type="button" name="btnCancelar" value="Cancelar"></a>
+<a href="index2.php"><input type="button" name="btnCancelar" value="Cancelar"></a>
 </form>
 </fieldset>
 </body>

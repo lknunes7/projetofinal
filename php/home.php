@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="images/imagem sem fundo.png"/>
+    <link rel="icon" type="image" href="../images/imagem sem fundo.png"/>
     <title>ɴᴀᴛᴋos</title>
     <style>
         body{
@@ -44,8 +44,8 @@
 </head>
 <body>
     <div class="box">
-        <a href="Lk/loginhome.php">Login</a>
-        <a href="Lk/cadastrohome.php">Cadastre-se</a>
+        <a href="loginhome.php">Login</a>
+        <a href="cadastrohome.php">Cadastre-se</a>
     </div>
 </body>
 </html>

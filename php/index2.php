@@ -11,7 +11,7 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="stylesheet" type="text/css" href="../css/style2.css">
       <link rel="stylesheet" href="../css/responsive.css">
       <link rel="icon" href="../images/fevicon.png" type="image/gif" />
       <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
@@ -44,7 +44,7 @@
   <div class="col-sm-4" >
     <div class="box_main">
     <h5 class="shirt_text"><?php echo $produto['nome']; ?></h5>
-     <img src="./imagens/<?php echo $produto['imagem'] ?>" alt="Imagem do produto">
+     <img src="../images/?php echo $produto['imagem'] ?>" alt="Imagem do produto">
       <div class="card-body">
         <p class="price_text">R$<?php echo number_format($produto['preco'], 2, ',', '.'); ?></p>
         <div class="buy_bt"><a href="Produto.php?id=<?php echo $produto['id'] ?>">Comprar</a></div>

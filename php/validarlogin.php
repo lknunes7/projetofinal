@@ -1,6 +1,6 @@
 <?php
 
-require_once("config.php");
+require_once("configLk.php");
 session_start();
 
 $email = $conn->real_escape_string($_POST["email"]);
@@ -14,7 +14,7 @@ if($result->num_rows > 0){
     $dadosusuario = $result->fetch_assoc();
     $_SESSION["email"] = $dadosusuario["email"];
     $_SESSION["senha"] = $dadosusuario["senha"];
-    header("location: ../Manel/carrinho/index.php");
+    header("location: index2.php");
 }else{
     ?>
     <script>window.history.back();</script>

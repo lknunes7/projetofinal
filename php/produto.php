@@ -1,166 +1,120 @@
-<?php
-include_once('config.php');
-if (isset($_POST['submit'])) {
-    //print_r('Nome: ' . $_POST['nome']);
-    //print_r('<br>');
-    //print_r('Email: ' . $_POST['email']);
-    //print_r('<br>');
-    //print_r('Telefone: ' . $_POST['telefone']);
-    //print_r('<br>');
-    //print_r('Sexo: ' . $_POST['genero']);
-    //print_r('<br>');
-    //print_r('Data de Nascimento: ' . $_POST['data_nascimento']);
-    //print_r('<br>');
-    //print_r('Cidade: ' . $_POST['cidade']);
-    //print_r('<br>');
-    //print_r('Estado: ' . $_POST['estado']);
-    //print_r('<br>');
-    //print_r('Endereço: ' . $_POST['endereco']);
-
-
-
-    $nomeprod = $_POST['nomeprod'];
-    $idprod = $_POST['idprod'];
-    $descricaoprod = $_POST['descricaoprod'];
-    $preco = $_POST['preco'];
-    $estoque = $_POST['estoque'];
-
-    $result = mysqli_query($conexao, "INSERT INTO produto(nomeprod,idprod,descricaoprod,preco,estoque) 
-        VALUES ('$nomeprod','$idprod','$descricaoprod','$preco','$estoque')");
-
-    if ($result === TRUE) {
-        echo "<script>alert('Registro inserido com sucesso.');</script>";
-        //echo "<script>window.location = 'select.php';</script>";
-    } else {
-        echo "Erro: " . $sql . "<br>" . $conexao->error;
-        echo "<script>window.history.back();</script>";
-    }
-    $conexao->close();
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <title>Natkos Cosmeticos</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/style2.css">
+      <link rel="stylesheet" href="../css/responsive.css">
+      <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+      <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <!-- Google Font -->
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      
+   <?php include 'Navbar.php'; 
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Produtos</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(90deg, rgb(255, 136, 0), rgb(131, 4, 4));
-        }
+      $id = $_GET['id'];
+      
+      
+      ?>
+      <div class="container ">
 
-        .box {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: black;
-            padding: 15px;
-            border-radius: 15px;
-            width: 28%;
-            color: black;
-        }
+      <?php
+        require_once 'conexao.php';
+        $sql = "SELECT * FROM produtos where id = $id";
+        $dados = $conn->query($sql) or die("Erro ao executar comando: " . mysqli_error($conn));
+        while ($produto = $dados->fetch_assoc()) {
+      ?>
+       
+         <div class="containerbk">
+         <div class="row">
+           <div class="col-sm">
+           <div class="tshirt_img_product"><img src="../images/<?php echo $produto['imagem'] ?>" alt="Imagem do produto"></div>
+           </div>
+           <div class="col-sm-7 pt-5">
+           <h1 class="fashion_product"><?php echo $produto['nome'];?></h1>
+           <hr>
+           <br>
+           <a class="price_text">R$<?php echo number_format($produto['preco'], 2, ',', '.'); ?></a>
+           <br>
+           <br>
+         <hr>
+      
+         <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-light collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="width: 80%;">
+                    Mais informações do Produto
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  <a>97% de origem natural</a>
+                  <br>
+                  <a>Produto vegano</a>
+                  <br>
+                  <a>Contém ativo da biodiversidade brasileira</a>
+                  <br>
+                  <a>Biodegradável </a>               </div>
+              </div>
+            </div>
+            <br><br>
+            <a href="carrinho.php?acao=add&id=<?php echo $produto['id'] ?>" class="btn btn-primary">Adicionar ao Carrinho!</a>
+            <hr>
+            <h4> Calcule seu Frete </h4>
+            <div class="input-group mb-3">
+               <input type="text" class="form-control" placeholder="Digite seu Cep" aria-label="Digite seu Cep" aria-describedby="button-addon2">
+               <div class="input-group-append">
+                 <button class="btn btn-outline-success" type="button" id="button-addon2">OK</button>
+               </div>
+             </div>
+         </div>
+         </div>
 
-        fieldset {
-            border: 3px solid red;
-        }
+         
+         </div>
+   </div>
+   <?php
+      }
+   ?>
+</div>
+<br><br><br>
 
-        legend {
-            border: 1px solid red;
-            padding: 10px;
-            text-align: center;
-            background-image: linear-gradient(45deg, orange, red);
-            border-radius: 8px;
-            color: white;
-        }
+<?php include 'Footer.php'; ?>
 
-        .inputBox {
-            position: relative;
-            color: black;
-        }
-
-        .inputUser {
-            border: none;
-            background-color: whitesmoke;
-            border-radius: 5px;
-            border-bottom: 1px solid whitesmoke;
-            outline: none;
-            color: black;
-            font-size: 15px;
-            width: 100%;
-        }
-
-        .labelInput {
-            position: relative;
-            top: 5px;
-            left: 0px;
-            color: white;
-        }
-
-        #submit {
-            background-image: linear-gradient(45deg, orange, red);
-            width: 100%;
-            border: none;
-            padding: 15px;
-            color: white;
-            font-size: 15px;
-            cursor: pointer;
-            border-radius: 10px;
-        }
-    </style>
-</head>
-
-<body>
-    <!--<a href="home.php">Voltar</a>-->
-    <div class="box">
-        <form action="produto.php" method="POST">
-            <fieldset>
-                <legend><b>Cadastro de Produtos</b></legend>
-                <br>
-                <div class="inputBox">
-                    <input type="text" name="nomeprod" id="nomeprod" class="inputUser" required>
-                    <label for="nomeprod" class="labelInput">Nome</label>
-                </div>
-
-                <br><br>
-
-                <div class="inputBox">
-                    <input type="text" name="idprod" id="idprod" class="inputUser" required>
-                    <label for="idprod" class="labelInput">Código</label>
-                </div>
-
-                <br><br>
-
-                <div class="inputBox">
-                <input type="text" name="descricaoprod" id="descricaoprod" class="inputUser" required>
-                <label for="descricaoprod" class="labelInput">Descrição do Produto</label>
-                </div>
-
-                <br><br>
-
-                <div class="inputBox">
-                    <input type="text" name="preco" id="preco" class="inputUser" required>
-                    <label for="preco" class="labelInput">Preço</label>
-                </div>
-
-                <br><br>
-
-                <div class="inputBox">
-                    <input type="text" name="estoque" id="estoque" class="inputUser" required>
-                    <label for="estoque" class="labelInput">Estoque Disponível</label>
-                </div>
-
-                <br><br>
-
-                <input type="submit" name="submit" id="submit">
-            </fieldset>
-        </form>
-    </div>
+      <script src="../js/jquery.min.js"></script>
+      <script src="../js/popper.min.js"></script>
+      <script src="../js/bootstrap.bundle.min.js"></script>
+      <script src="../js/jquery-3.0.0.min.js"></script>
+      <script src="../js/plugin.js"></script>
+      <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../js/custom.js"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+        </script>
 </body>
 
 </html>

@@ -39,7 +39,7 @@ function limparCarrinho()
     ?>
             <div class="alert alert-success" role="alert">
                 Venda realizada com sucesso!
-                <a href="index.php" class="btn btn-primary">Continuar comprando...</a>
+                <a href="index2.php" class="btn btn-primary">Continuar comprando...</a>
             </div>
         <?php
         }
@@ -48,7 +48,7 @@ function limparCarrinho()
         ?>
         <div class="alert alert-warning" role="alert">
             Nenhum item foi escolhido para compra!
-            <a href="index.php" class="btn btn-primary">Continuar comprando...</a>
+            <a href="index2.php" class="btn btn-primary">Continuar comprando...</a>
         </div>
     <?php
     }

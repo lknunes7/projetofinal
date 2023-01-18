@@ -3,7 +3,7 @@
 if(isset($_POST['submit']))
 {
 
-    include_once('config.php');
+    include_once('configLk.php');
     
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -31,7 +31,7 @@ if(isset($_POST['submit']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="images/imagem sem fundo.png" />
+    <link rel="icon" type="image" href="../images/imagem sem fundo.png" />
     <title>ɴᴀᴛᴋos ➜ cᴀᴅᴀsᴛʀo</title>
     <style>
     body {

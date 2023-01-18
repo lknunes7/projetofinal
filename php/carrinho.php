@@ -58,7 +58,7 @@ if (isset($_GET['acao'])) {
       <meta name="description" content="">
       <meta name="author" content="">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="stylesheet" type="text/css" href="../css/style2.css">
       <link rel="stylesheet" href="../css/responsive.css">
       <link rel="icon" href="../images/fevicon.png" type="image/gif" />
       <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
@@ -128,7 +128,7 @@ if (isset($_GET['acao'])) {
                                 $total      += floatval(str_replace('.', '', $sub));
                     ?>
                         <tr>
-                            <td><img src="./imagens/<?php echo $produto['imagem'] ?>" alt="Imagem do produto" style="max-width: 70px"></td>
+                            <td><img src="../imagens/<?php echo $produto['imagem'] ?>" alt="Imagem do produto" style="max-width: 70px"></td>
                             <td><?php echo $nome; ?></td>
                             <td>
                                 <input type="text" size="3" name="prod['<?php echo $id; ?>']" value="<?php echo $qtd; ?>">
@@ -156,7 +156,7 @@ if (isset($_GET['acao'])) {
                 ?>
             </table>
 
-            <a class="btn btn-info" href="index.php">Continuar Comprando</a>
+            <a class="btn btn-info" href="index2.php">Continuar Comprando</a>
             <div class="buynow_bt"><a href="finalizar.php">Finalizar </a></div>
 
         </form>
