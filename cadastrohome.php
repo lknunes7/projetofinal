@@ -223,7 +223,7 @@ if(isset($_POST['submit']))
 
                 <div>
                     <br>
-                    <h6 style="color: whitesmoke; text-align: center;">Já possuí conta?<p></p><a href="loginhome.html"
+                    <h6 style="color: whitesmoke; text-align: center;">Já possuí conta?<p></p><a href="loginhome.php"
                             style="color: #D7C3B3; align-items: center; font-size: x-small;">Logar</a></h6>
                 </div>
 
