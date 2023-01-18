@@ -14,7 +14,7 @@ if($result->num_rows > 0){
     $dadosusuario = $result->fetch_assoc();
     $_SESSION["email"] = $dadosusuario["email"];
     $_SESSION["senha"] = $dadosusuario["senha"];
-    header("location: principal.php");
+    header("location: ../Manel/carrinho/index.php");
 }else{
     ?>
     <script>window.history.back();</script>
