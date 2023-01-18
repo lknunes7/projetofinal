@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Home Natkos</title>
+    <link rel="icon" type="image" href="images/imagem sem fundo.png"/>
+    <title>ɴᴀᴛᴋos</title>
     <style>
         body{
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(90deg, #159a76, green);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #D7C3B3;
             text-align: center;
-            color: #D7C3B3;
+            
         }
 
         .box{
@@ -18,31 +19,33 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #D7C3B3;
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 30px;
             border-radius: 15px;
         }
 
         a{
             text-decoration: none;
-            color: #31683E;
-            border: 3px solid #31683E;
-            border-radius: 10px;
+            background-color: #D7C3B3;
+            border: none;
             padding: 10px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 15px;
+            color: #31683E;
+            cursor: pointer;
         }
 
         a:hover{
-            background-color: white;
+            background-color: rgb(209, 204, 204);
+            color: #31683E;
         }
     </style>
 </head>
 <body>
-    <h1>Tela de Teste Home Site Natkos ;)</h1>
-    <h2>Receba essa Tela de Login e Cadastro</h2>
-
     <div class="box">
-        <a href="telalogin.php">Login</a>
-        <a href="telacadastro.php">Cadastre-se</a>
+        <a href="Lk/loginhome.php">Login</a>
+        <a href="Lk/cadastrohome.php">Cadastre-se</a>
     </div>
 </body>
 </html>
