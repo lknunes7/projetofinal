@@ -54,7 +54,17 @@
                            </li>
                            <li><a href="home.php">
                               <i class="fa fa-user" aria-hidden="true"></i>
+                              <?php
+                              if (isset($_SESSION["nomeUsuario"])) {
+                              ?>
+                              <span class="padding_10"><?php echo $_SESSION["nomeUsuario"]; ?></span></a>
+                              <?php
+                              } else {
+                              ?>
                               <span class="padding_10">Usuario</span></a>
+                              <?php
+                              }
+                              ?>
                            </li>
                         </ul>
                      </div>

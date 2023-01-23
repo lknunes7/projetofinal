@@ -14,6 +14,7 @@ if($result->num_rows > 0){
     $dadosusuario = $result->fetch_assoc();
     $_SESSION["email"] = $dadosusuario["email"];
     $_SESSION["senha"] = $dadosusuario["senha"];
+    $_SESSION["nomeUsuario"] = $dadosusuario["nome"];
     header("location: index2.php");
 }else{
     ?>

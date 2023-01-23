@@ -24,7 +24,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
    <body style="background-color:#E3E6E6">
-      
+   <?php session_start(); ?>   
    <?php include 'Navbar.php'; ?>
    <?php include 'Carrousel.php'; ?>
       <!--Navbar FIM-->
@@ -44,7 +44,7 @@
   <div class="col-sm-4" >
     <div class="box_main">
     <h5 class="shirt_text"><?php echo $produto['nome']; ?></h5>
-     <img src="../images/?php echo $produto['imagem'] ?>" alt="Imagem do produto">
+     <img src="../images/<?php echo $produto['imagem'] ?>" alt="Imagem do produto">
       <div class="card-body">
         <p class="price_text">R$<?php echo number_format($produto['preco'], 2, ',', '.'); ?></p>
         <div class="buy_bt"><a href="Produto.php?id=<?php echo $produto['id'] ?>">Comprar</a></div>
