@@ -17,8 +17,12 @@
                   <div id="mySidenav" class="sidenav">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                      <a href="index2.php">Home</a>
-                     <a href="Produto.php">Produtos</a>
                      <a href="addProduto.php">Formulario</a>
+                  </div>
+                  <div id="mySideUsu" class="sideusu">
+                     <a href="javascript:void(0)" class="closebtn" onclick="closeUsu()">&times;</a>
+                     <a style="color:white">Bem Vindo, <?php echo $_SESSION["nomeUsuario"]; ?></a>
+                     <a href="../">Logout</a>
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src="../images/toggle-icon.png"></span>
                   <div class="dropdown">
@@ -52,7 +56,7 @@
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                               <span class="padding_10">Carrinho</span></a>
                            </li>
-                           <li><a href="home.php">
+                           <li><span class="fa fa-shopping-cart" onclick="openUsu()">
                               <i class="fa fa-user" aria-hidden="true"></i>
                               <?php
                               if (isset($_SESSION["nomeUsuario"])) {
@@ -61,7 +65,7 @@
                               <?php
                               } else {
                               ?>
-                              <span class="padding_10">Usuario</span></a>
+                              <span class="padding_10">Usuario</span></span>
                               <?php
                               }
                               ?>

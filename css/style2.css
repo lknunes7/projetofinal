@@ -373,6 +373,20 @@ background-image: url(../images/banner-bg.png);*/
     transition: 0.5s;
     padding-top: 60px;
 }
+.sideusu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(173, 173, 173);
+    opacity: 0.8;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -388,6 +402,28 @@ background-image: url(../images/banner-bg.png);*/
 }
 
 .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+.sideusu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideusu a:hover {
+    color: #262626;
+}
+
+.sideusu .closebtn {
     position: absolute;
     top: 0;
     right: 25px;

@@ -74,9 +74,15 @@
          function openNav() {
            document.getElementById("mySidenav").style.width = "250px";
          }
+         function openUsu() {
+           document.getElementById("mySideUsu").style.width = "250px";
+         }
          
          function closeNav() {
            document.getElementById("mySidenav").style.width = "0";
+         }
+         function closeUsu() {
+           document.getElementById("mySideUsu").style.width = "0";
          }
 
          function product(){
