@@ -15,7 +15,7 @@ if($result->num_rows > 0){
     $_SESSION["email"] = $dadosusuario["email"];
     $_SESSION["senha"] = $dadosusuario["senha"];
     $_SESSION["nomeUsuario"] = $dadosusuario["nome"];
-    header("location: index2.php");
+    header("location: index.php");
 }else{
     ?>
     <script>window.history.back();</script>

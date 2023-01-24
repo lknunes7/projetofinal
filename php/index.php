@@ -1,51 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="../images/imagem sem fundo.png"/>
-    <title>ɴᴀᴛᴋos</title>
-    <style>
-        body{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            background-color: #D7C3B3;
-            text-align: center;
-            
-        }
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <title>Natkos Cosmeticos</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <link rel="stylesheet" href="../css/responsive.css">
+      <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+      <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <!-- Google Font -->
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body style="background-color:#E3E6E6">
+   <?php session_start(); ?>   
+   <?php include 'Navbar.php'; ?>
+   <?php include 'Carrousel.php'; ?>
+      <!--Navbar FIM-->
 
-        .box{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-        }
 
-        a{
-            text-decoration: none;
-            background-color: #D7C3B3;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            border-radius: 10px;
-            font-size: 15px;
-            color: #31683E;
-            cursor: pointer;
-        }
+      <!-- Produtos Começo-->
 
-        a:hover{
-            background-color: rgb(209, 204, 204);
-            color: #31683E;
-        }
-    </style>
-</head>
-<body>
-    <div class="box">
-        <a href="loginhome.php">Login</a>
-        <a href="cadastrohome.php">Cadastre-se</a>
+   <div class="container-fluid">
+      <div class="row">
+      <?php
+        require_once 'conexao.php';
+        $sql = "SELECT * FROM produtos ORDER BY id";
+        $dados = $conn->query($sql) or die("Erro ao executar comando: " . mysqli_error($conn));
+        while ($produto = $dados->fetch_assoc()) {
+      ?>
+
+  <div class="col-sm-4" >
+    <div class="box_main">
+    <h5 class="shirt_text"><?php echo $produto['nome']; ?></h5>
+     <img src="../images/<?php echo $produto['imagem'] ?>" alt="Imagem do produto">
+      <div class="card-body">
+        <p class="price_text">R$<?php echo number_format($produto['preco'], 2, ',', '.'); ?></p>
+        <div class="buy_bt"><a href="Produto.php?id=<?php echo $produto['id'] ?>">Comprar</a></div>
+      </div>
     </div>
-</body>
+  </div> 
+  <?php
+      }
+   ?>
+
+</div>
+</div>
+<!--Footer-->   
+<?php include 'Footer.php'; ?>
+
+
+
+<!--Links Js--> 
+      <script src="../js/jquery.min.js"></script>
+      <script src="../js/popper.min.js"></script>
+      <script src="../js/bootstrap.bundle.min.js"></script>
+      <script src="../js/jquery-3.0.0.min.js"></script>
+      <script src="../js/plugin.js"></script>
+      <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../js/custom.js"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+         }
+         function openUsu() {
+           document.getElementById("mySideUsu").style.width = "250px";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+         function closeUsu() {
+           document.getElementById("mySideUsu").style.width = "0";
+         }
+
+         function product(){
+             const product = document.getElementById("Prod");
+            product.scrollIntoView({behavior:"smooth"})
+          }   
+      </script>
+
+
+
+   </body>
 </html>

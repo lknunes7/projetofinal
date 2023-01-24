@@ -16,13 +16,13 @@
                <div class="containt_main">
                   <div id="mySidenav" class="sidenav">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                     <a href="index2.php">Home</a>
+                     <a href="index.php">Home</a>
                      <a href="addProduto.php">Formulario</a>
                   </div>
                   <div id="mySideUsu" class="sideusu">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeUsu()">&times;</a>
                      <a style="color:white">Bem Vindo, <?php echo $_SESSION["nomeUsuario"]; ?></a>
-                     <a href="../">Logout</a>
+                     <a href="sair.php">Logout</a>
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src="../images/toggle-icon.png"></span>
                   <div class="dropdown">
@@ -56,19 +56,20 @@
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                               <span class="padding_10">Carrinho</span></a>
                            </li>
-                           <li><span class="fa fa-shopping-cart" onclick="openUsu()">
+                           <li><a onclick="openUsu()" href="#">
                               <i class="fa fa-user" aria-hidden="true"></i>
                               <?php
                               if (isset($_SESSION["nomeUsuario"])) {
                               ?>
-                              <span class="padding_10"><?php echo $_SESSION["nomeUsuario"]; ?></span></a>
+                              <span class="padding_10"><?php echo $_SESSION["nomeUsuario"]; ?></span>
                               <?php
                               } else {
                               ?>
-                              <span class="padding_10">Usuario</span></span>
+                              <a class="padding_10" href="loginhome.php">Usuario</a>
                               <?php
                               }
                               ?>
+                              </a>
                            </li>
                         </ul>
                      </div>

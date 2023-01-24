@@ -12,7 +12,7 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="../css/style2.css">
+      <link rel="stylesheet" type="text/css" href="../css/style.css">
       <link rel="stylesheet" href="../css/responsive.css">
       <link rel="icon" href="../images/fevicon.png" type="image/gif" />
       <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
@@ -60,7 +60,7 @@
               <div class="card-header" id="headingThree">
                 <h5 class="mb-0">
                   <button class="btn btn-light collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="width: 80%;">
-                    Mais informações do Produto
+                  informações do Produto
                   </button>
                 </h5>
               </div>
@@ -76,7 +76,7 @@
               </div>
             </div>
             <br><br>
-            <a href="carrinho.php?acao=add&id=<?php echo $produto['id'] ?>" class="btn btn-primary">Adicionar ao Carrinho!</a>
+            <a href="carrinho.php?acao=add&id=<?php echo $produto['id'] ?>" class="btn btn btn-secondary">Adicionar ao Carrinho!</a>
             <hr>
             <h4> Calcule seu Frete </h4>
             <div class="input-group mb-3">
@@ -97,7 +97,10 @@
 </div>
 <br><br><br>
 
+
 <?php include 'Footer.php'; ?>
+
+
 
       <script src="../js/jquery.min.js"></script>
       <script src="../js/popper.min.js"></script>
@@ -116,5 +119,4 @@
          }
         </script>
 </body>
-
 </html>
