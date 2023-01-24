@@ -6,7 +6,7 @@
                <div class="row">
                   <div class="col-sm-12">
                      <div class="logo"> <img src="../images/logo.png"> </div>
-                     <div class="banner_taital"><a class="nomeloja" href="index2.php">NATKOS</a></div>
+                     <div class="banner_taital"><a class="nomeloja" href="index.php">NATKOS</a></div>
                   </div>
                </div>
             </div>
