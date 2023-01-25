@@ -8,7 +8,7 @@ $msg = false;
 
         $extensao = strrchr($_FILES['arquivo']['name'], '.');
         $novo_nome = md5(time()) . $extensao;
-        $diretorio = "../imagens/";
+        $diretorio = "../images/";
 
         move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$novo_nome);
         

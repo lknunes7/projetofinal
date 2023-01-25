@@ -58,8 +58,7 @@ if (isset($_GET['acao'])) {
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <link rel="icon" type="image" href="../images/logo.png" />
-      <title>𝙉𝘼𝙏𝙆𝙊𝙎 ➜ 𝘾𝘼𝙍𝙍𝙄𝙉𝙃𝙊</title>
+      <title>Natkos Cosmeticos</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">

@@ -21,16 +21,8 @@
                   </div>
                   <div id="mySideUsu" class="sideusu">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeUsu()">&times;</a>
-                     <a style="color:white">Bem Vindo(a) <?php echo $_SESSION["nomeUsuario"]; ?></a>
-                     <br>
-                     <a style="color:white">Nome: </a>
-                     <a style="color:white">Email: </a>
-                     <a style="color:white">Nascimento: </a>
-                     <a style="color:white">Telefone: </a>
-                     <a style="color:white">Cidade: </a>
-                     <a style="color:white">Estado: </a>
-                     <a style="color:white">Endereço: </a>
-                     <a href="sair.php" style="margin-top: 135%; text-align: center;">Logout</a>
+                     <a style="color:white">Bem Vindo, <?php echo $_SESSION["nomeUsuario"]; ?></a>
+                     <a href="sair.php">Logout</a>
                   </div>
                   <span class="toggle_icon" onclick="openNav()"><img src="../images/toggle-icon.png"></span>
                   <div class="dropdown">
