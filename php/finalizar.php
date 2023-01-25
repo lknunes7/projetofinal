@@ -14,11 +14,11 @@ function limparCarrinho()
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar pedido</title>
+    <title>𝙉𝘼𝙏𝙆𝙊𝙎 ➜ 𝙁𝙄𝙉𝘼𝙇𝙄𝙕𝘼𝙍</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="">
 <header>
         <h1 class="text-center">Finalizar pedido</h1>
         <hr>
@@ -48,7 +48,7 @@ function limparCarrinho()
         ?>
         <div class="alert alert-warning" role="alert">
             Nenhum item foi escolhido para compra!
-            <a href="index2.php" class="btn btn-primary">Continuar comprando...</a>
+            <a href="index.php" class="btn btn-primary">Continuar comprando...</a>
         </div>
     <?php
     }

@@ -16,7 +16,7 @@
       <!-- Google Font -->
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-<title>CRUD Pessoas</title>
+<title>𝙉𝘼𝙏𝙆𝙊𝙎 ➜ 𝘼𝘿𝘿 𝙋𝙍𝙊𝘿𝙐𝙏𝙊</title>
 </head>
 <body style="background-color:#E3E6E6">
 <fieldset>
