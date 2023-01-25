@@ -36,16 +36,14 @@ if(isset($_POST['submit']))
     <style>
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        background-color: #D7C3B3;
+        background-image: url(../images/natural-cosmetics-on-desk.jpg);
+        background-size: 100%;
     }
 
     .box {
-        background-color: rgba(0, 0, 0, 0.7);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 15px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: relative;
+        padding: 100px;
         border-radius: 15px;
         color: #D7C3B3;
     }
@@ -55,14 +53,17 @@ if(isset($_POST['submit']))
     }
 
     .botao-entrar {
-        background-color: #D7C3B3;
+        
+        background-color: #00C53B;
         border: none;
         padding: 10px;
-        width: 100%;
+        width: 10%;
         border-radius: 10px;
         font-size: 15px;
         color: #31683E;
         cursor: pointer;
+        width: 1000px;
+        margin: 0 auto;
     }
 
     .botao-entrar:hover {
@@ -219,7 +220,9 @@ if(isset($_POST['submit']))
 
                 <br><br>
 
-                <button type="submit" name="submit" id="submit" class="botao-entrar">Enviar</button>
+                <div>
+                    <button type="submit" name="submit" id="submit" class="botao-entrar">Enviar</button>
+                </div>
 
                 <div>
                     <br>

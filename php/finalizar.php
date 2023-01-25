@@ -5,7 +5,8 @@ if (!isset($_SESSION['carrinho'])) {
 }   
 function limparCarrinho()
 {
-    session_destroy();
+
+    unset($_SESSION['carrinho']);  
 }
 ?>
 
