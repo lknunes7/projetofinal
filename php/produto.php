@@ -7,7 +7,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <title>Natkos Cosmeticos</title>
+      <title>𝙉𝘼𝙏𝙆𝙊𝙎 ➜ 𝙋𝙍𝙊𝘿𝙐𝙏𝙊𝙎</title>
+      <link rel="icon" type="image" href="../images/logo.png" />
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
