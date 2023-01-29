@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image" href="../images/imagem sem fundo.png" />
-    <title>ɴᴀᴛᴋos ➜ ʟᴏɢɪɴ</title>
+    <title>𝙽𝙰𝚃𝙺𝙾𝚂 ➜ 𝙻𝙾𝙶𝙸𝙽</title>
     <style>
     body {
         font-family: Verdana, Geneva, Tahoma, sans-serif;

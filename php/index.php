@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <title>Natkos Cosmeticos</title>
+      <title>𝙽𝙰𝚃𝙺𝙾𝚂 ➜ 𝙷𝙾𝙼𝙴</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -23,7 +23,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
-   <body style="background-color:#E3E6E6">
+   <body style="background-image: url(../images/natural-cosmetics-on-desk.jpg); background-size: 100%;">
    <?php session_start(); ?>   
    <?php include 'Navbar.php'; ?>
    <?php include 'Carrousel.php'; ?>
