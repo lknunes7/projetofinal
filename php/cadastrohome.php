@@ -38,14 +38,16 @@ if(isset($_POST['submit']))
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         background-image: url(../images/natural-cosmetics-on-desk.jpg);
         background-size: 100%;
+        justify-content: center;
+        display: flex;
     }
 
     .box {
         background-color: rgba(0, 0, 0, 0.5);
         position: relative;
-        padding: 100px;
+        padding: 50px;
         border-radius: 15px;
-        color: #D7C3B3;
+        margin-top: 250px;
     }
 
     ::placeholder {
@@ -57,18 +59,19 @@ if(isset($_POST['submit']))
         background-color: #00C53B;
         border: none;
         padding: 10px;
-        width: 10%;
+        width: 10vw;
         border-radius: 10px;
         font-size: 15px;
-        color: #31683E;
         cursor: pointer;
-        width: 1000px;
         margin: 0 auto;
+        color: white;
+        justify-content: center;
+        display: flex;
     }
 
     .botao-entrar:hover {
-        background-color: rgb(209, 204, 204);
-        color: #31683E;
+        background-color: #00C53B;
+        color: black;
     }
 
     fieldset {
@@ -84,11 +87,12 @@ if(isset($_POST['submit']))
     }
 
     legend {
-        background-color: #D7C3B3;
-        border: 1px solid #D7C3B3;
-        text-align: center;
-        color: #31683E;
+        background-color: #00C53B;
+        border: 1px solid #00C53B;
+        color: white;
         border-radius: 10px;
+        justify-content: center;
+        display: flex;
     }
 
     .inputBox {
@@ -114,7 +118,7 @@ if(isset($_POST['submit']))
         font-size: 15px;
     }
 
-    .inputUser:focus~.labelInput,
+    /*.inputUser:focus~.labelInput,
     .inputUser:valid~.labelInput {
         top: -20px;
         color: #D7C3B3;
@@ -122,7 +126,7 @@ if(isset($_POST['submit']))
         border: 1px solid #31683E;
         border-radius: 3px;
         background-color: #31683E;
-    }
+    }*/
 
     #datanasc {
         color: #D7C3B3;
@@ -145,7 +149,7 @@ if(isset($_POST['submit']))
         <form action="cadastrohome.php" method="POST">
             <fieldset>
                 <legend>
-                    <h3>Cadastro de Usuários</h3>
+                    <h3>Cadastro</h3>
                 </legend>
 
                 <br>
@@ -226,12 +230,13 @@ if(isset($_POST['submit']))
 
                 <div>
                     <br>
-                    <h6 style="color: whitesmoke; text-align: center;">Já possuí conta?<p></p><a href="loginhome.php"
-                            style="color: #D7C3B3; align-items: center; font-size: x-small;">Logar</a></h6>
+                    <h6 style="color: whitesmoke; text-align: center;">Já possuí conta?<p></p><a
+                            href="loginhome.php"
+                            style="color: #00C53B; align-items: center; font-size: x-small;">Logar</a></h6>
                 </div>
 
                 <div class="index">
-                    <a href="index.php"><img src="https://img.icons8.com/material-outlined/24/null/home--v2.png" /></a>
+                    <a href="index.php"><img src="../images/botao-de-inicio.png"/></a>
                 </div>
 
             </fieldset>
