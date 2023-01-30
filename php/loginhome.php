@@ -84,16 +84,23 @@
                 <legend>
                     <h3>Login</h3>
                 </legend>
+                
                 <br>
+                
                 <label for="email" style="color: white;">Email: </label><br><p>
                 <input type="text" name="email" id="email" placeholder="E-mail" required>
+                
                 <br><br>
+                
                 <label for="senha" style="color: white;">Senha: </label><br><p>
                 <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                
                 <br><br><br>
+                
                 <div>
-                <input type="submit" class="botao-entrar" style="font-weight: bolder;" value="Entrar">
+                    <input type="submit" class="botao-entrar" style="font-weight: bolder;" value="Entrar">
                 </div>
+                
                 <div>
                     <br>
                     <h6 style="color: whitesmoke; text-align: center;">Não possuí conta?<p></p><a
@@ -104,6 +111,7 @@
                 <div class="index">
                     <a href="index.php"><img src="../images/botao-de-inicio.png"/></a>
                 </div>
+
             </form>
             </form>
         </fieldset>

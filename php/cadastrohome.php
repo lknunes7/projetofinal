@@ -50,12 +50,21 @@ if(isset($_POST['submit']))
         margin-top: 250px;
     }
 
+    input {
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-size: 15px;
+        background-color: white;
+        width: 20vw;
+    }
+
     ::placeholder {
-        color: #D7C3B3;
+        color: silver;
     }
 
     .botao-entrar {
-        
         background-color: #00C53B;
         border: none;
         padding: 10px;
@@ -74,18 +83,6 @@ if(isset($_POST['submit']))
         color: black;
     }
 
-    fieldset {
-        border: 0px solid #D7C3B3;
-    }
-
-    .gener {
-        color: #D7C3B3;
-        font-size: 15px;
-        border: 4px solid #31683E;
-        border-radius: 3px;
-        background-color: #31683E;
-    }
-
     legend {
         background-color: #00C53B;
         border: 1px solid #00C53B;
@@ -93,53 +90,15 @@ if(isset($_POST['submit']))
         border-radius: 10px;
         justify-content: center;
         display: flex;
+        
     }
 
-    .inputBox {
-        position: relative;
-    }
-
-    .inputUser {
-        background: none;
-        border: none;
-        border-bottom: 1px solid #D7C3B3;
-        outline: none;
-        width: 100%;
-        color: #D7C3B3;
-    }
-
-    .labelInput {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        pointer-events: none;
-        transition: .5s;
-        color: #31683E;
-        font-size: 15px;
-    }
-
-    /*.inputUser:focus~.labelInput,
-    .inputUser:valid~.labelInput {
-        top: -20px;
-        color: #D7C3B3;
-        font-size: 12px;
-        border: 1px solid #31683E;
-        border-radius: 3px;
-        background-color: #31683E;
-    }*/
-
-    #datanasc {
-        color: #D7C3B3;
-        background-color: #31683E;
-        border-radius: 3px;
-        outline: none;
-        padding: 10px;
-        border: none;
+    fieldset {
+        border: 0px solid #D7C3B3;
     }
 
     .index {
         text-align: center;
-        color: white;
     }
     </style>
 </head>
@@ -155,77 +114,68 @@ if(isset($_POST['submit']))
                 <br>
 
                 <div class="inputBox">
+                    <label for="nome" class="labelInput">Nome Completo:</label><br><p>
                     <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="email" class="labelInput">Nome Completo</label>
                 </div>
 
-                <br><br>
+                
 
                 <div class="inputBox">
+                    <label for="email" class="labelInput">Email:</label><br><p>
                     <input type="text" name="email" id="email" class="inputUser" required>
-                    <label for="email" class="labelInput">Email</label>
                 </div>
 
-                <br><br>
+                
 
                 <div class="inputBox">
+                    <label for="senha" class="labelInput">Senha:</label><br><p>
                     <input type="password" name="senha" id="senha" class="inputUser" required>
-                    <label for="senha" class="labelInput">Senha</label>
                 </div>
 
-                <br><br>
 
                 <div class="inputBox">
+                    <label for="telefone" class="labelInput">Telefone:</label><br><p>
                     <input type="tel" name="telefone" id="telefone" class="inputUser" required>
-                    <label for="telefone" class="labelInput">Telefone</label>
                 </div>
 
                 <br>
 
-                <label class="gener">Gênero:</label>
-                <br>
-                <p></p>
-                <input type="radio" id="masculino" name="genero" value="masculino" required>
-                <label for="masculino">Masculino</label>
-                <br>
-                <input type="radio" id="feminino" name="genero" value="feminino" required>
-                <label for="feminino">Feminino</label>
-                <br>
-                <input type="radio" id="outro" name="genero" value="outro" required>
-                <label for="outro">Outro</label>
+                <label value="genero" class="input">Gênero:</label><p>
+                <select class="input" name="genero">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                </select>
 
-                <br><br>
+                <br><br><br>
 
-                <label
-                    style="color: #D7C3B3; font-size: 15px; border: 4px solid #31683E; border-radius: 3px; background-color: #31683E;"
-                    for="datanasc">Data de Nascimento:</label>
+                <label for="datanasc">Data de Nascimento:</label><br><p>
                 <input type="date" name="datanasc" id="datanasc" required>
 
-                <br><br>
+                <br>
 
                 <div class="inputBox">
+                    <label for="cidade" class="labelInput">Cidade:</label><br><p>
                     <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                    <label for="cidade" class="labelInput">Cidade</label>
                 </div>
 
-                <br><br>
 
                 <div class="inputBox">
+                    <label for="estado" class="labelInput">Estado:</label><br><p>
                     <input type="text" name="estado" id="estado" class="inputUser" required>
-                    <label for="estado" class="labelInput">Estado</label>
                 </div>
 
-                <br><br>
+                
 
                 <div class="inputBox">
+                    <label for="endereco" class="labelInput">Endereço:</label><br><p>
                     <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                    <label for="endereco" class="labelInput">Endereço</label>
                 </div>
 
-                <br><br>
+                
 
                 <div>
-                    <button type="submit" name="submit" id="submit" class="botao-entrar">Enviar</button>
+                    <button type="submit" name="submit" id="submit" class="botao-entrar">Cadastrar</button>
                 </div>
 
                 <div>
