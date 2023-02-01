@@ -5,7 +5,7 @@
                      <div class="carousel-item active">
                         <div class="row">
                            <div class="col-sm-12">
-                              <h1 class="banner_taital">So Aqui<br>Seus Produtos Preferidos!</h1>
+                              <h1 class="banner_taital">Só Aqui<br>Seus Produtos Preferidos!</h1>
                               
                            </div>
                         </div>

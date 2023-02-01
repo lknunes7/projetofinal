@@ -18,7 +18,7 @@
                   <div id="mySidenav" class="sidenav">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                      <a href="index.php">Home</a>
-                     <a href="addProduto.php">Formulario</a>
+                     <a href="addProduto.php">Adicionar novos produtos</a>
                   </div>
                   <div id="mySideUsu" class="sideusu">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeUsu()">&times;</a>
