@@ -19,6 +19,11 @@
 <title>𝙽𝙰𝚃𝙺𝙾𝚂 ➜ 𝙰𝙳𝙸𝙲𝙸𝙾𝙽𝙰𝚁 𝙿𝚁𝙾𝙳𝚄𝚃𝙾𝚂</title>
 </head>
 <body style="background-color:#E3E6E6">
+<?php
+session_start();
+if ($_SESSION["nomeUsuario"] == "admin") {
+
+      ?>
 <fieldset>
 <div class="container p-4" style="background-color:white; margin-top: 150px;">
 <legend>Inserir novo Produto</legend>
@@ -39,4 +44,13 @@ placeholder="Informe o preço">
 </form>
 </div>
 </fieldset>
+<?php
+} else {
+      ?>
+            <body style="font-family: Verdana, Geneva, Tahoma, sans-serif; background-image: url(../images/natural-cosmetics-on-desk.jpg); background-size: 100%; justify-content: center; display: flex;">
+                  
+            </body>
+      <?php
+}
+?>
 </body>
