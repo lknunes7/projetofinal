@@ -157,7 +157,20 @@ if (isset($_GET['acao'])) {
             </table>
 
             <a class="btn btn-outline-dark" href="index.php">Voltar para Produtos</a>
+            <?php
+            if (isset($_SESSION["nomeUsuario"])) {
+
+
+
+                ?>
             <div class="buynow_bt"><a href="finalizar.php">Finalizar </a></div>
+            <?php
+            }else{
+                ?>
+                <div class="buynow_bt"><a href="loginhome.php">Faça login para finalizar a compra</a></div>
+                <?php
+            }
+            ?>
 
         </form>
 

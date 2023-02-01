@@ -66,7 +66,7 @@
                               <?php
                               } else {
                               ?>
-                              <a class="padding_10" href="loginhome.php">Usuario</a>
+                              <a class="padding_10" href="loginhome.php">FAZER LOGIN</a>
                               <?php
                               }
                               ?>
