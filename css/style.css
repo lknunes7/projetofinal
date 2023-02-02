@@ -228,9 +228,16 @@ img {
     margin: 0;
     padding: 0;
 }
+.redh{
+    background-color:#f2f2f2;
+    padding: 8px;
+}
+.redh:hover{
+    color:red;
+}
 
 .form-control:focus {
-    border-color: #ffffff !important;
+    border-color: #00f018 !important;
     box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
 }
 
@@ -442,6 +449,14 @@ background-image: url(../images/banner-bg.png);*/
         font-size: 18px;
     }
 }
+@media screen and (max-height: 450px) {
+    .sideusu {
+        padding-top: 15px;
+    }
+    .sideusu a {
+        font-size: 18px;
+    }
+}
 
 .toggle_icon {
     cursor: pointer;
@@ -565,10 +580,16 @@ background-image: url(../images/banner-bg.png);*/
 
 .login_menu li a:hover {
     color: #262626;
+    
+
 }
 
 .padding_10 {
     padding-left: 10px;
+    
+}
+.gap{
+    gap: 1px;
 }
 
 
@@ -605,6 +626,7 @@ a:hover {
     width: 100%;
     float: left;
     padding-bottom: 60px;
+    
 }
 
 .banner_taital {
@@ -616,11 +638,12 @@ a:hover {
     text-transform: uppercase;
     font-weight: bold;
     text-shadow: black 0.1em 0.1em 0.2em}
+    
 
   
 
 .buynow_bt {
-    width: 170px;
+    width: 50%;
     margin: 0 auto;
     padding-top: 30px;
 }
@@ -704,7 +727,7 @@ a:hover {
 }
 
 .box_main {
-    width: 100%;
+    
     background-color: #ffffff;
     height: auto;
     padding: 20px;
@@ -712,6 +735,10 @@ a:hover {
     margin-bottom: 20px;
 
 }
+.box_main img {
+    height:500px;
+    width: 1000px;
+  }
 
 .shirt_text {
     width: 100%;
