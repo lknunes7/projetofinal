@@ -17,7 +17,7 @@ $sql = "INSERT INTO produtos (nome, preco, imagem) VALUES ('$nome', $preco, '$no
 echo $sql;
 
 if ($conn->query($sql) === TRUE) {
-echo "<script>alert('Registro inserido com sucesso.');</script>";
+echo "<script>alert('Produto inserido com sucesso.');</script>";
 echo "<script>window.location = 'index.php';</script>";
 } else {
 echo "Erro: " . $sql . "<br>" . $conn->error;

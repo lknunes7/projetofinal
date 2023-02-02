@@ -17,8 +17,10 @@ if(isset($_POST['submit']))
     $endereco = $_POST['endereco'];
     $sql = "INSERT INTO usuarios(nome,email,senha,telefone,genero,datanasc,cidade,estado,endereco) 
     VALUES ('$nome','$email','$senha','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')";
-
     $result = $conn->query($sql);
+    echo "<script>alert('Cadastro inserido com sucesso.');</script>";
+    echo "<script>window.location = 'loginhome.php';</script>";
+    
     
 }
 
@@ -31,7 +33,7 @@ if(isset($_POST['submit']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="../images/imagem sem fundo.png" />
+    <link rel="icon" type="image/png" href="../images/logo.png"/>
     <title>𝙽𝙰𝚃𝙺𝙾𝚂 ➜ 𝙲𝙰𝙳𝙰𝚂𝚃𝚁𝙾</title>
     <style>
     body {
@@ -186,6 +188,7 @@ if(isset($_POST['submit']))
 
                 <div>
                     <button type="submit" name="submit" id="submit" class="botao-entrar">Cadastrar</button>
+                    
                 </div>
 
                 <div>

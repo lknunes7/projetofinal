@@ -18,7 +18,10 @@ if($result->num_rows > 0){
     header("location: index.php");
 }else{
     ?>
-    <script>window.history.back();</script>
+    <script>
+    alert("Email ou Senha incorretos.");
+    window.history.back();
+    </script>
     <?php
 }
 

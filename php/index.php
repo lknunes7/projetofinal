@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <link rel="icon" type="image/png" href="../images/logo.png"/>
       <title>𝙽𝙰𝚃𝙺𝙾𝚂 ➜ 𝙷𝙾𝙼𝙴</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
@@ -36,7 +37,13 @@
       <div class="row">
       <?php
         require_once 'conexao.php';
-        $sql = "SELECT * FROM produtos ORDER BY id";
+        if(!empty($_GET['search'])){
+
+          $data = $_GET['search'];
+          $sql = "SELECT * FROM produtos WHERE id LIKE '%$data%' or nome LIKE '%$data%' or preco LIKE '%$data%' ORDER BY id";
+        }else{
+          $sql = "SELECT * FROM produtos ORDER BY id";
+        }
         $dados = $conn->query($sql) or die("Erro ao executar comando: " . mysqli_error($conn));
         while ($produto = $dados->fetch_assoc()) {
       ?>

@@ -19,6 +19,7 @@
                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                      <a href="index.php">Home</a>
                      <a href="addProduto.php">Adicionar novos produtos</a>
+                     <a href="ExibirProd.php">Lista de Produtos</a>
                   </div>
                   <div id="mySideUsu" class="sideusu">
                      <a href="javascript:void(0)" class="closebtn" onclick="closeUsu()">&times;</a>
@@ -30,9 +31,11 @@
                   </div>
                   <div class="main">
                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Pesquise Aqui!">
+
+                     <!--pesquisa-->
+                        <input type="search" class="form-control" placeholder="Pesquise Aqui!" id="pesquisar">
                         <div class="input-group-append">
-                           <button class="btn btn-secondary" type="button" style="background-color: #00c53b; border-color:#00c53b ">
+                           <button class="btn btn-secondary" onclick="searchData()" type="button" style="background-color: #00c53b; border-color:#00c53b ">
                            <i class="fa fa-search"></i>
                            </button>
                         </div>
@@ -55,18 +58,18 @@
                         <ul class="banner_taital">
                            <li><a href="carrinho.php">
                               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                              <span class="padding_10">Carrinho</span></a>
+                              <span>ㅤCarrinho</span></a>
                            </li>
-                           <li><a onclick="openUsu()" href="#">
-                              <i class="fa fa-user" aria-hidden="true"></i>
+                           <li>
+                              <a onclick="openUsu()" href="#">
                               <?php
                               if (isset($_SESSION["nomeUsuario"])) {
                               ?>
-                              <span class="padding_10"><?php echo $_SESSION["nomeUsuario"]; ?></span>
+                              <span class="fa fa-user" aria-hidden="true" class="padding_10">ㅤ<?php echo $_SESSION["nomeUsuario"]; ?></span>
                               <?php
                               } else {
                               ?>
-                              <a class="padding_10" href="loginhome.php">FAZER LOGIN</a>
+                              <a class="fa fa-user" aria-hidden="true" class="padding_10" href="loginhome.php">ㅤFAZER LOGIN</a>
                               <?php
                               }
                               ?>
@@ -78,5 +81,19 @@
                </div>
             </div>
          </div>
+         <script>
+            var search = document.getElementById('pesquisar');
+         
+            search.addEventListener("keydown", function(event){
+               if (event.key === "Enter"){
+                  searchData();
+               }
+            });         
+
+            function searchData()
+            {
+               window.location = 'index.php?search='+search.value; 
+            }
+         </script>
          
       

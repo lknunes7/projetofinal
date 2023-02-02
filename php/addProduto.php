@@ -16,6 +16,7 @@
       <!-- Google Font -->
       <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="icon" type="image/png" href="../images/logo.png"/>
 <title>𝙽𝙰𝚃𝙺𝙾𝚂 ➜ 𝙰𝙳𝙸𝙲𝙸𝙾𝙽𝙰𝚁 𝙿𝚁𝙾𝙳𝚄𝚃𝙾𝚂</title>
 </head>
 <body style="background-color:#E3E6E6">
@@ -47,10 +48,8 @@ placeholder="Informe o preço">
 <?php
 } else {
       ?>
-            <body style="font-family: Verdana, Geneva, Tahoma, sans-serif; background-image: url(../images/natural-cosmetics-on-desk.jpg); background-size: 100%; justify-content: center; display: flex;">
-                  
-            </body>
       <?php
+      header('Location: protect.php');
 }
 ?>
 </body>
