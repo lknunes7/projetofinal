@@ -81,13 +81,7 @@ session_start();
             <br><br>
             <a href="carrinho.php?acao=add&id=<?php echo $produto['id'] ?>" class="btn btn btn-secondary">Adicionar ao Carrinho!</a>
             <hr>
-            <h4> Calcule seu Frete </h4>
-            <div class="input-group mb-3">
-               <input type="text" class="form-control" placeholder="Digite seu Cep" aria-label="Digite seu Cep" aria-describedby="button-addon2">
-               <div class="input-group-append">
-                 <button class="btn btn-outline-success" type="button" id="button-addon2">OK</button>
-               </div>
-             </div>
+            
          </div>
          </div>
 
